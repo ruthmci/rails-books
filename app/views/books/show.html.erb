@@ -4,10 +4,10 @@
 <h3><%= @book.publisher %></h3>
 <h4><%= @book.genre %></h4>
 <p><%= @book.description %></p>
-<%= button_to "Back", :method => :back %>
+<%= link_to "", books_path, class: "fas fa-arrow-circle-left link-styling" %>
 </div>
 
-<%= link_to "Update", edit_book_path %>
+<%= link_to "", edit_book_path, class: "fas fa-edit link-styling" %>
 
 <form action="<%= delete_book_path %>" method="POST" >
   <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />

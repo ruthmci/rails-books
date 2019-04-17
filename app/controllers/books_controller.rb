@@ -11,7 +11,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new
+    @book = Book.new(params)
     @book.title = params[:title]
     @book.author = params[:author]
     @book.publisher = params[:publisher]

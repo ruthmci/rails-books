@@ -4,12 +4,16 @@
     <title>Rails01Books</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="navbar">
+  <%= link_to "", books_path, class: "fas fa-home link-styling" %>
+  <%= link_to "", books_new_path, class: "fas fa-book link-styling" %>
+  </div>
     <%= yield %>
   </body>
 </html>
